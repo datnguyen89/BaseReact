@@ -11,7 +11,7 @@ export const MainHeaderWrapper = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(270deg, #6634E0 -8.83%, #0465B0 74.3%);
+  background: linear-gradient(270deg, #6634E0 -60%, ${props => props.backgroundColor} 75%);
   z-index: 1;
 `
 export const HeaderLogoArea = styled.div`

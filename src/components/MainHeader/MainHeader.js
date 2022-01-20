@@ -20,7 +20,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 
 const MainHeader = props => {
   const { commonStore } = props
-  const { pageName } = props.commonStore
+  const { pageName } = commonStore
   const [visibleMobileDrawerLeft, setVisibleMobileDrawerLeft] = useState(false)
   const [visibleMobileDrawerRight, setVisibleMobileDrawerRight] = useState(false)
   const { device } = commonStore
@@ -34,7 +34,7 @@ const MainHeader = props => {
     commonStore.setIsCollapse(!commonStore.isCollapse)
   }
   return (
-    <MainHeaderWrapper>
+    <MainHeaderWrapper backgroundColor={commonStore.appTheme.solidColor}>
       <HeaderLogoArea width={commonStore.isCollapse ? 'auto' : '220px'}>
         <img src={IMAGES.AUTH_LOGO} alt={''} style={{ cursor: 'pointer' }} height={48}
              onClick={() => history.push(PAGES.HOME.PATH)} />

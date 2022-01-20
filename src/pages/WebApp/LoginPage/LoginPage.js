@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { inject, observer } from 'mobx-react'
 import AuthLayout from '../../../layouts/AuthLayout'
 import { Button, Checkbox, Col, Divider, Form, Input, message, Row } from 'antd'
@@ -20,6 +20,10 @@ const LoginPage = props => {
     console.log(collectionForm)
     history.push('/')
   }
+
+  useEffect(() => {
+    console.log(commonStore.appTheme)
+  }, [])
 
   return (
     <AuthLayout>

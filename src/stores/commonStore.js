@@ -23,7 +23,7 @@ class CommonStore {
   }
 
   // App theme
-  @observable appTheme = THEME_LIST[0]
+  @observable appTheme = THEME_LIST[2]
   @action setTheme = name => {
     let newTheme = THEME_LIST.find(item => item.name === name)
     console.log(newTheme)
